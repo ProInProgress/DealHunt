@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Price Compare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 280px;
+      padding: 15px;
+      margin: 0;
+      background: #f8f9fa;
+    }
+    h3 {
+      text-align: center;
+      margin-top: 0;
+      color: #333;
+    }
+    #productName {
+      font-size: 14px;
+      font-weight: bold;
+      color: #444;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .result {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      padding: 8px 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease;
+    }
+    .result:hover {
+      transform: scale(1.02);
+    }
+    .site {
+      font-weight: bold;
+      color: #007BFF;
+    }
+    .price {
+      font-size: 15px;
+      font-weight: bold;
+      color: #28a745;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h3>💰 Price Compare</h3>
+  <div id="productName">Detecting product...</div>
+  <div id="results">Fetching...</div>
+  <div class="footer">Powered by PriceCompare</div>
+  <script src="popup.js"></script>
+</body>
+</html>
