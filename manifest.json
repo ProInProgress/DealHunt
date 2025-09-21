@@ -1,34 +1,33 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "PriceComp",
   "version": "1.0",
   "description": "Compare prices of products on Flipkart and Amazon and then share the subsequent product",
 
-  "browser_action": {
+  "action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
 
-  "content_scripts": [
-    {
-      "matches": [
-        "https://www.flipkart.com/*"
-      ],
-      "css": [ 
-        "price-watch.css" 
-      ],
-      "js": [
-        "jquery-3.6.0.min.js",
-        "content-script.js"
-      ],
-      "run_at": "document_end"
-    }
-  ],
+"content_scripts": [
+  {
+    "matches": [
+      "https://www.flipkart.com/*",
+      "https://www.amazon.in/*"
+    ],
+    "js": [
+      "jquery-3.6.0.min.js",
+      "content-script.js"
+    ],
+    "run_at": "document_end"
+  }
+],
 
-  "permissions": [
-    "tabs",
-    "activeTab",
-    "https://www.flipkart.com/",
-    "https://amazon.in/"
+
+  "permissions": ["tabs", "activeTab", "scripting"],
+
+  "host_permissions": [
+    "https://www.flipkart.com/*",
+    "https://www.amazon.in/*"
   ]
 }
